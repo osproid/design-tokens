@@ -14,8 +14,15 @@
  * hijau samar agar selaras brand emerald — sengaja BUKAN slate & BUKAN jiplak
  * salah satu modul. Kontras ramp dijaga (teks 900 di atas bg 100 ≫ AA; text-soft
  * dipetakan ke 600 utk jaminan ≥4.5:1 di atas surface).
+ *
+ * `@theme static` (WAJIB, bukan `@theme` biasa): Tailwind v4 me-TREE-SHAKE var
+ * tema yang tak terpakai utilitasnya di produksi. Karena shell adalah yang meng-
+ * emit `:root` untuk DIWARISI operator/backoffice (runtime-cascade), SEMUA token
+ * harus selalu hadir di `:root` walau shell sendiri belum memakai utilitasnya.
+ * `static` memaksa emit penuh. (Terbukti: tanpa static, `--color-neutral-*` hilang
+ * dari build shell → cascade ke remote putus.)
  */
-@theme {
+@theme static {
   /* ── Brand (emerald) — FINAL ───────────────────────────────────────────── */
   --color-brand-50: #ecfdf5;
   --color-brand-100: #d1fae5;
