@@ -1,0 +1,79 @@
+/*
+ * @ospro/design-tokens — SUMBER TUNGGAL token visual suite os.pro.id
+ * ============================================================================
+ * Dikonsumsi:
+ *  - BUILD-TIME (install + @import): mainpro (shell), ospro/apps/web (engine)
+ *    → Tailwind v4 meng-generate utilitas dari blok @theme ini.
+ *  - RUNTIME (tanpa install): fulfillment operator & backoffice
+ *    → referensi `var(--color-*, <fallback>)`; warisi dari :root shell saat
+ *      embedded. Shell yang meng-emit :root (stylesheet host selalu termuat).
+ *
+ * Ganti tema suite = ubah skala di SINI saja, bump versi paket, rebuild shell+engine.
+ *
+ * NEUTRAL = "suite baru" (keputusan Bryan 2026-06-30): cool-gray ber-undertone
+ * hijau samar agar selaras brand emerald — sengaja BUKAN slate & BUKAN jiplak
+ * salah satu modul. Kontras ramp dijaga (teks 900 di atas bg 100 ≫ AA; text-soft
+ * dipetakan ke 600 utk jaminan ≥4.5:1 di atas surface).
+ */
+@theme {
+  /* ── Brand (emerald) — FINAL ───────────────────────────────────────────── */
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  /* ── Neutral suite (cool-gray + undertone hijau samar) — FINAL ──────────── */
+  --color-neutral-50: #f6f8f7;
+  --color-neutral-100: #eceff0;
+  --color-neutral-200: #dbe1e0;
+  --color-neutral-300: #c0c9c8;
+  --color-neutral-400: #93a0a0;
+  --color-neutral-500: #6c7878;
+  --color-neutral-600: #515c5c;
+  --color-neutral-700: #3e4747;
+  --color-neutral-800: #2a3130;
+  --color-neutral-900: #181d1d;
+  --color-neutral-950: #0d1110;
+
+  /* ── Semantik (peran) — hue diangkat dari design-system modul ───────────── */
+  --color-success-500: #16a34a;
+  --color-success-weak: #e6f7ec;
+  --color-warning-500: #d97706;
+  --color-warning-ink: #b45309;
+  --color-warning-weak: #fff5e4;
+  --color-danger-500: #dc2626;
+  --color-danger-weak: #fef2f2;
+  --color-info-500: #2563eb;
+  --color-info-weak: #e9f1ff;
+
+  /* ── Role/alias (apa yang dipetakan modul) ─────────────────────────────── */
+  --color-bg: var(--color-neutral-100);
+  --color-surface: #ffffff;
+  --color-surface-soft: var(--color-neutral-50);
+  --color-line: var(--color-neutral-200);
+  --color-text: var(--color-neutral-900);
+  --color-text-soft: var(--color-neutral-600);
+  --color-primary: var(--color-brand-600);
+  --color-primary-weak: var(--color-brand-50);
+
+  /* command-rail backoffice (navy) — token semantik, BUKAN dihapus */
+  --color-rail: #0e1a30;
+  --color-rail-ink: #f2f6fc;
+  --color-rail-muted: #9fb1d0;
+
+  /* ── Radius & shadow (gabungan operator/backoffice) ────────────────────── */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(13, 23, 42, 0.06);
+  --shadow: 0 4px 14px rgba(13, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(13, 23, 42, 0.08);
+}
