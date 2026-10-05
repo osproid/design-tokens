@@ -1,7 +1,7 @@
 {
   "name": "@ospro/design-tokens",
   "version": "0.1.0",
-  "description": "Token visual terpusat suite os.pro.id (warna brand + neutral + semantik + radius/shadow). Sumber tunggal tema; dikonsumsi shell+engine saat build, operator+backoffice via :root cascade saat runtime.",
+  "description": "Token visual terpusat suite app.ebiz.id (warna brand + neutral + semantik + radius/shadow). Sumber tunggal tema; dikonsumsi shell+engine saat build, operator+backoffice via :root cascade saat runtime.",
   "type": "module",
   "files": ["tokens.css", "tokens.ts"],
   "exports": {

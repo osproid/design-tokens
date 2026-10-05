@@ -1,6 +1,6 @@
 # @ospro/design-tokens
 
-Token visual **terpusat** untuk suite `os.pro.id` (Module Federation: shell + engine + operator + backoffice). Satu sumber kebenaran tema — ganti warna suite = ubah di sini, bump versi, rebuild konsumen build-time.
+Token visual **terpusat** untuk suite `app.ebiz.id` (Module Federation: shell + engine + operator + backoffice). Satu sumber kebenaran tema — ganti warna suite = ubah di sini, bump versi, rebuild konsumen build-time.
 
 ## Isi
 - `tokens.css` — blok Tailwind v4 `@theme` (brand emerald + neutral suite + semantik + role + radius/shadow).
